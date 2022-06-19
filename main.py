@@ -17,27 +17,26 @@ Bot = Client(
 )
 
 
-START_TEXT = """Hᴇʏ! {}
+START_TEXT = """Hey! {}
 
-☞ Vᴇʀʏ Hᴀᴘᴘʏ ᴛᴏ Kɴᴏᴡ Tʜᴀᴛ Yᴏᴜ ᴀʀᴇ Dᴏɴᴀᴛɪɴɢ Uꜱ.
+☞ Sangat Senang mengetahui bahwa Anda menyumbangkan kami.
 
-Tʜᴀɴᴋꜱ Fᴏʀ Uꜱɪɴɢ [Oᴜʀ Bᴏᴛꜱ](https://t.me/+KYLCdC4XfcdmNGVl).
-
-Mᴀᴅᴇ Wɪᴛʜ Lᴏᴠᴇ Fᴏʀ [Yᴏᴜ](tg://settings)"""
+Terima kasih telah menggunakan [bot kami](https://t.me/+ku2kx0h4KRFkOTll).
+"""
 
 DONATE_BUTTONS = [
     InlineKeyboardButton(
-        text='Dᴏɴᴀᴛᴇ 💳',
+        text='Donasi 💳',
         callback_data='donateme'
     )
 ]
 
-DONATE_TEXT = """Hᴇʏ! {}
-Yᴏᴜ Cᴀɴ Dᴏɴᴀᴛᴇ Uꜱ Uꜱɪɴɢ UPI.
+DONATE_TEXT = """Hey! {}
+Anda dapat berdonasi kepada kami menggunakan dana
 
-PayTm/PhonePe/GooglePay - `sk7062563@okhdfcbank`
+Dana - `085796582392`
 
-Oʀ Cᴏɴᴛᴀcᴛ Uꜱ :- [ツAʙʜɪsʜᴇᴋ Kᴜᴍᴀʀ 🇮🇳](https://telegram.me/HelpLessBoi). """
+Atau hubungi kami :- [leon](https://telegram.me/divmas). """
 
 BUTTON_TEXT = """ Click the Below Buttons To Donate Us. """
 
@@ -45,7 +44,7 @@ UPI_BUTTONS = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(" Back ", callback_data="back"),
-            InlineKeyboardButton(" PayPal ", url="https://paypal.me/AbhishekKumarIN47")
+            InlineKeyboardButton(" PayPal ", url="https://paypal.me/diivmas")
         ],
         [
             InlineKeyboardButton('Close', callback_data='close')
@@ -56,8 +55,8 @@ UPI_BUTTONS = InlineKeyboardMarkup(
 PAY_BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(" UPI ", callback_data="upidata"),
-            InlineKeyboardButton(" PayPal ", url="https://paypal.me/AbhishekKumarIN47")
+            InlineKeyboardButton(" Dana ", callback_data="upidata"),
+            InlineKeyboardButton(" PayPal ", url="https://paypal.me/diivmas")
         ],
         [
             InlineKeyboardButton('Close', callback_data='close')
@@ -87,7 +86,7 @@ async def donate(bot, update):
 @Bot.on_message(filters.private & filters.command(["bots"]))
 async def bots(bot, update):
     await bot.send_message(
-        text="https://t.me/+t1ko_FOJxhFiOThl",
+        text="https://t.me/dlksyz",
         reply_markup=InlineKeyboardMarkup([PAY_BUTTONS]),
         disable_web_page_preview=True,
         quote=True
@@ -99,8 +98,8 @@ async def answerX(bot, update):
     answer = list()
     answer.append(InlineQueryResultArticle(title="This is My Donation Or Payment Bot", description="You Can Donate Us Using Inline.",
     input_message_content=InputTextMessageContent(message_text="Please donate us any amount you like, to support the services."),
-    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("Dᴏɴᴀᴛᴇ 💳", url="https://upayi.ml/sk7062563@okhdfcbank/10") ] ] ),
-    thumb_url="https://telegra.ph/file/330bd070950b8ef775ca9.jpg") )
+    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("Donasi 💳", url="https://paypal.me/diivmas") ] ] ),
+    thumb_url="https://paypal.me/diivmas") )
     try:
         await update.answer(results=answer, cache_time=0)
     except Exception as e:
